@@ -247,7 +247,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
-    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
+--    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
@@ -275,7 +275,11 @@ globalkeys = awful.util.table.join(
     awful.key({ }, "XF86AudioLowerVolume", function ()
         awful.util.spawn("amixer set Master 9%-", false) end),
     awful.key({ }, "XF86AudioMute", function ()
-        awful.util.spawn("amixer -D pulse set Master 1+ toggle", false) end)
+        awful.util.spawn("amixer -D pulse set Master 1+ toggle", false) end),
+
+    -- Screen Lock
+    awful.key({ modkey, }, "l", function () awful.util.spawn("gnome-screensaver-command -l")    end)
+    
 )
 
 clientkeys = awful.util.table.join(
