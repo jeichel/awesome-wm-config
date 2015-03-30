@@ -278,7 +278,7 @@ globalkeys = awful.util.table.join(
         awful.util.spawn("amixer -D pulse set Master 1+ toggle", false) end),
 
     -- Screen Lock
-    awful.key({ modkey, }, "l", function () awful.util.spawn("gnome-screensaver-command -l")    end)
+    awful.key({ "Control", "Mod1" }, "l", function () awful.util.spawn("gnome-screensaver-command -l")    end)
     
 )
 
