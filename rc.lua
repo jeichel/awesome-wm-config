@@ -366,6 +366,10 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
+    -- Set Rule for Empathy to always be master and chats to be slaves
+    { rule_any = { class = { "Empathy" } }, except = { instance = "Contact List" },
+      callback = awful.client.setslave }
+    
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
     --   properties = { tag = tags[1][2] } },
