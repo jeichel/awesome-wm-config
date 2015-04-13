@@ -354,7 +354,7 @@ root.keys(globalkeys)
 -- {{{ Rules
 awful.rules.rules = {
     -- All clients will match this rule.
-    -- { rule = { }, properties = { }, callback = awful.client.setslave }
+    { rule = { }, properties = { }, callback = awful.client.setslave },
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
@@ -366,10 +366,10 @@ awful.rules.rules = {
     { rule = { class = "pinentry" },
       properties = { floating = true } },
     { rule = { class = "gimp" },
-      properties = { floating = true } },
+      properties = { floating = true } }
     -- Set Rule for Empathy to always be master and chats to be slaves
-    { rule_any = { class = { "Empathy" } }, except = { instance = "Contact List" },
-      callback = awful.client.setslave }
+--    { rule_any = { class = { "Empathy" } }, except = { instance = "Contact List" },
+--      callback = awful.client.setslave }
     
     -- Set Firefox to always map on tags number 2 of screen 1.
     -- { rule = { class = "Firefox" },
