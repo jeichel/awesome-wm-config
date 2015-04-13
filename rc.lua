@@ -47,7 +47,7 @@ end
 -- beautiful.init("/usr/share/awesome/themes/sky/theme.lua")
 -- beautiful.init("/usr/share/awesome/themes/zenburn/theme.lua")
 -- beautiful.init("/usr/share/awesome/themes/fence/theme.lua")
- beautiful.init("/usr/share/awesome/themes/tree/theme.lua")
+beautiful.init("/usr/share/awesome/themes/tree/theme.lua")
 -- beautiful.init("/usr/share/awesome/themes/wombat/theme.lua")
 -- beautiful.init("/usr/share/awesome/themes/wabbit/theme.lua")
 theme.menu_width = "185"
@@ -247,7 +247,7 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey, "Control" }, "r", awesome.restart),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit),
 
---    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
+    awful.key({ modkey,           }, "l",     function () awful.tag.incmwfact( 0.05)    end),
     awful.key({ modkey,           }, "h",     function () awful.tag.incmwfact(-0.05)    end),
     awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1)      end),
     awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1)      end),
@@ -354,6 +354,7 @@ root.keys(globalkeys)
 -- {{{ Rules
 awful.rules.rules = {
     -- All clients will match this rule.
+    -- { rule = { }, properties = { }, callback = awful.client.setslave }
     { rule = { },
       properties = { border_width = beautiful.border_width,
                      border_color = beautiful.border_normal,
