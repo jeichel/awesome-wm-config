@@ -367,6 +367,9 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "pinentry" },
       properties = { floating = true } },
+    { rule = { class = "Gnome-terminal" },
+      properties = { border_width = "1", 
+                     border_color = "#ffffff"} },
     { rule = { class = "gimp" },
       properties = { floating = true } }
     -- Set Rule for Empathy to always be master and chats to be slaves
@@ -406,7 +409,7 @@ client.add_signal("manage", function (c, startup)
     end
 end)
 
-client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
-
+--client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+--client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+-- Add a margin around windows
 -- }}}
